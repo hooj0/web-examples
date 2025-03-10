@@ -8,6 +8,8 @@
  *  - string
  *  - symbol – 来自 ES2015
  *  - bigint – 来自 ES2020
+ *
+ *  - object – 来自 ES5
  */
 let name = 'John', age = 25, isAdmin = false;
 console.log(name, age, isAdmin);    // John 25 false
@@ -89,3 +91,11 @@ console.log(typeof sym);    // symbol
 console.log(sym);           // Symbol()
 
 console.log(Symbol('foo') === Symbol('foo'));   // false
+
+
+// --------------------------------------------------------------------
+// bigint 类型: bigint 类型表示大于 253 - 1 的整数。要形成 bigint 文字数字，在数字末尾附加字母 n
+// --------------------------------------------------------------------
+let bigint = 1234567890123456789012345678901234567890n;
+console.log(bigint + 1n);
+console.log(typeof bigint);     // bigint
