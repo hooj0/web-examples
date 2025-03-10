@@ -64,3 +64,18 @@ console.log(NaN === NaN);   // false
 
 // 与 NaN 的任何运算都会返回 NaN
 console.log(NaN / 2);   // NaN
+
+
+// --------------------------------------------------------------------
+// string 类型： JavaScript 字符串是不可变的，这意味着它们在创建后无法修改
+// --------------------------------------------------------------------
+let str = 'Hello';
+let str2 = 'World';
+console.log(str, str2);     // Hello World
+
+str2 = 'World!';
+console.log(str, str2);     // Hello World!
+
+// 无法修改字符串数据
+str2[0] = 'w';
+console.log(str, str2);     // Hello World!
