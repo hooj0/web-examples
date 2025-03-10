@@ -79,3 +79,13 @@ console.log(str, str2);     // Hello World!
 // 无法修改字符串数据
 str2[0] = 'w';
 console.log(str, str2);     // Hello World!
+
+
+// --------------------------------------------------------------------
+// symbol 类型: ES6 中引入了一种新的原始类型，与其他原始类型不同，symbol 类型没有文字形式。
+// --------------------------------------------------------------------
+let sym = Symbol();
+console.log(typeof sym);    // symbol
+console.log(sym);           // Symbol()
+
+console.log(Symbol('foo') === Symbol('foo'));   // false
