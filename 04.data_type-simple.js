@@ -35,8 +35,25 @@ console.log(typeof(size));      // undefined
 
 console.log(null == undefined);     // true
 
+
 // --------------------------------------------------------------------
-// number 类型
+// number 类型： number 类型来表示整数和浮点数
 // --------------------------------------------------------------------
 let num = 123;
 console.log(num, typeof num);     // 123 number
+
+let num2 = 12.34;
+console.log(num2, typeof num2);   // 12.34 number
+
+let price = 10.00;
+console.log(price); // 10 省略了小数点
+
+console.log(Number.MAX_VALUE, Number.MIN_VALUE);    // 1.7976931348623157e+308 5e-324
+// 无穷大和无穷小
+console.log(Number.MAX_VALUE * 2);  // Infinity
+console.log(-Number.MAX_VALUE * 2); // -Infinity
+
+
+// --------------------------------------------------------------------
+// number 类型： number 类型来表示整数和浮点数
+// --------------------------------------------------------------------
