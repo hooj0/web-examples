@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ecf6b36a-c42d-4a06-96db-074fa045dc4e" name="Changes" comment="feat(javascript): 添加逻辑运算符示例代码&#10;&#10;- 新增逻辑运算符（||、&amp;&amp;、??）的示例代码&#10;- 演示了逻辑运算符在不同场景下的使用方法&#10;- 解释了逻辑或赋值、逻辑与赋值、空值合并赋值运算符的用法">
+      <change afterPath="$PROJECT_DIR$/javascript/302.operators-nullish.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/400.object-spread.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/500.func.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hooj0&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1741251655" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1741251654" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:hooj0/web-examples.git&quot;,
+    &quot;accountId&quot;: &quot;6fec405a-8b19-4fbc-ac89-67c64e52c249&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2tw7eKxipEhgzkmGOf0PO7uVbeH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.01.variable-let.js.executor": "Run",
+    "Node.js.02.variable-var.js.executor": "Run",
+    "Node.js.03.variable-const.js.executor": "Run",
+    "Node.js.04.data_type-simple.js.executor": "Run",
+    "Node.js.200.data_type.js.executor": "Run",
+    "Node.js.300.number-operators.js.executor": "Run",
+    "Node.js.302.operators-nullish.js.executor": "Run",
+    "Node.js.400.object-spread.js.executor": "Run",
+    "Node.js.500.func.js.executor": "Run",
+    "Node.js.variable-examples.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/codes/javascript/web-examples/javascript",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\codes\javascript\web-examples\javascript" />
+      <recent name="F:\codes\javascript\javascript-examples" />
+      <recent name="F:\codes\javascript\javascript-examples\css3" />
+      <recent name="F:\codes\javascript\javascript-examples\html5" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\codes\javascript\javascript-examples\javascript" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ecf6b36a-c42d-4a06-96db-074fa045dc4e" name="Changes" comment="" />
+      <created>1741251376566</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741251376566</updated>
+      <workItem from="1741251378030" duration="12454000" />
+      <workItem from="1741590066992" duration="11464000" />
+      <workItem from="1741660402559" duration="8612000" />
+    </task>
+    <task id="LOCAL-00001" summary="docs: 添加 JavaScript 基础知识文档&#10;&#10;- 新增变量声明和赋值示例（let 和 var 关键字）&#10;- 添加常量声明示例（const 关键字）&#10;- 介绍简单数据类型，包括 null、undefined、boolean、number、string 等&#10;- 提供变量类型检查的示例">
+      <option name="closed" value="true" />
+      <created>1741593536726</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741593536726</updated>
+    </task>
+    <task id="LOCAL-00002" summary="docs(data-type): 补充 number 类型的说明&#10;&#10;- 添加了对 number 类型表示整数和浮点数的解释&#10;-增加了多个 number 类型">
+      <option name="closed" value="true" />
+      <created>1741596285931</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741596285931</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat(04.data_type-simple.js): 添加 NaN 类型的示例和解释&#10;&#10;- 在文件中添加了 NaN 类型的定义和示例&#10;- 说明了 NaN 的特殊性质，如不等于任何值包括自身&#10;- 展示了与 NaN 进行运算的结果">
+      <option name="closed" value="true" />
+      <created>1741596537081</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741596537081</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat(data-type): 添加 string 类型示例&#10;&#10;- 在文件中添加了 string 类型的示例代码&#10;- 展示了字符串的不可变特性&#10;- 添加了字符串赋值和尝试修改的示例">
+      <option name="closed" value="true" />
+      <created>1741596847996</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741596847996</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat(04.data_type-simple.js): 添加 Symbol 数据类型示例- 在文件中添加了 Symbol 数据类型的使用示例&#10;- 说明了 Symbol 类型的基本特性，包括其唯一性和不可比较性">
+      <option name="closed" value="true" />
+      <created>1741597551179</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1741597551179</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor(200.data_type): 更新数据类型示例&#10;&#10;- 重命名文件名，统一命名格式&#10;- 添加 object 数据类型注释&#10;- 补充 bigint 数据类型示例和注释">
+      <option name="closed" value="true" />
+      <created>1741598463067</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741598463067</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor: 优化代码格式和注释&#10;&#10;- 统一代码注释格式，使用多行注释开头&#10;- 添加数据类型示例代码&#10;- 优化变量声明">
+      <option name="closed" value="true" />
+      <created>1741658293862</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1741658293862</updated>
+    </task>
+    <task id="LOCAL-00008" summary="docs: 更新 variable-var 文档&#10;- 移除了对全局作用域的冗余注释&#10;- 优化了代码的可读性和简洁性">
+      <option name="closed" value="true" />
+      <created>1741658371400</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741658371400</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: 添加对象类型数字运算示例&#10;&#10;- 新增示例代码展示了对象如何通过定义 valueOf 和 toString 方法参与数字运算&#10;- 介绍了当存在 valueOf 方法时，优先使用它进行运算&#10;- 展示了当只有 toString 方法时，如何使用它进行运算">
+      <option name="closed" value="true" />
+      <created>1741658384991</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741658384991</updated>
+    </task>
+    <task id="LOCAL-00010" summary="docs: 更新项目结构和 README内容&#10;&#10;- 新增 javascript/README.md 文件，简要说明 javascript-examples 内容&#10;- 更新项目根目录的 README.md 文件，扩展为 web-examples 并添加目录结构">
+      <option name="closed" value="true" />
+      <created>1741660055145</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741660055145</updated>
+    </task>
+    <task id="LOCAL-00011" summary="docs(css3/html5): 添加 CSS3 和 HTML5 示例文档&#10;&#10;- 新建 css3-examples 和 html5-examples 文档&#10;- 添加 CSS3 和 HTML5 教程示例内容">
+      <option name="closed" value="true" />
+      <created>1741660068044</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741660068044</updated>
+    </task>
+    <task id="LOCAL-00012" summary="docs: add javascript.md">
+      <option name="closed" value="true" />
+      <created>1741660118723</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1741660118723</updated>
+    </task>
+    <task id="LOCAL-00013" summary="docs:补充数据类型和数字运算的示例&#10;&#10;- 在 200.data_type.js 中添加了 Boolean 类型的更多示例&#10;- 在 300.number-operators.js 中添加了 + 运算符进行数字类型转换的示例&#10;- 优化了代码格式和注释，提高了代码可读性">
+      <option name="closed" value="true" />
+      <created>1741664696084</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1741664696084</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor(javascript): 重构300.operators-number.js&#10;- 修改文件名以更好地反映内容&#10;- 优化代码格式和结构&#10;- 添加数字类型转换操作相关内容">
+      <option name="closed" value="true" />
+      <created>1741665732508</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1741665732508</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat(javascript): 添加逻辑运算符示例代码&#10;&#10;- 新增逻辑运算符（||、&amp;&amp;、??）的示例代码&#10;- 演示了逻辑运算符在不同场景下的使用方法&#10;- 解释了逻辑或赋值、逻辑与赋值、空值合并赋值运算符的用法">
+      <option name="closed" value="true" />
+      <created>1741665825750</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741665825750</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="docs: 添加 JavaScript 基础知识文档&#10;&#10;- 新增变量声明和赋值示例（let 和 var 关键字）&#10;- 添加常量声明示例（const 关键字）&#10;- 介绍简单数据类型，包括 null、undefined、boolean、number、string 等&#10;- 提供变量类型检查的示例" />
+    <MESSAGE value="docs(data-type): 补充 number 类型的说明&#10;&#10;- 添加了对 number 类型表示整数和浮点数的解释&#10;-" />
+    <MESSAGE value="feat(04.data_type-simple.js): 添加 NaN 类型的示例和解释&#10;&#10;- 在文件中添加了 NaN 类型的定义和示例&#10;- 说明了 NaN 的特殊性质，如不等于任何值包括自身&#10;- 展示了与 NaN 进行运算的结果" />
+    <MESSAGE value="feat(data-type): 添加 string 类型示例&#10;&#10;- 在文件中添加了 string 类型的示例代码&#10;- 展示了字符串的不可变特性&#10;- 添加了字符串赋值和尝试修改的示例" />
+    <MESSAGE value="feat(04.data_type-simple.js): 添加 Symbol 数据类型示例- 在文件中添加了 Symbol 数据类型的使用示例&#10;- 说明了 Symbol 类型的基本特性，包括其唯一性和不可比较性" />
+    <MESSAGE value="refactor(200.data_type): 更新数据类型示例&#10;&#10;- 重命名文件名，统一命名格式&#10;- 添加 object 数据类型注释&#10;- 补充 bigint 数据类型示例和注释" />
+    <MESSAGE value="refactor: 优化代码格式和注释&#10;&#10;- 统一代码注释格式，使用多行注释开头&#10;- 添加数据类型示例代码&#10;- 优化变量声明" />
+    <MESSAGE value="docs: 更新 variable-var 文档&#10;- 移除了对全局作用域的冗余注释&#10;- 优化了代码的可读性和简洁性" />
+    <MESSAGE value="feat: 添加对象类型数字运算示例&#10;&#10;- 新增示例代码展示了对象如何通过定义 valueOf 和 toString 方法参与数字运算&#10;- 介绍了当存在 valueOf 方法时，优先使用它进行运算&#10;- 展示了当只有 toString 方法时，如何使用它进行运算" />
+    <MESSAGE value="docs: 更新项目结构和 README内容&#10;&#10;- 新增 javascript/README.md 文件，简要说明 javascript-examples 内容&#10;- 更新项目根目录的 README.md 文件，扩展为 web-examples 并添加目录结构" />
+    <MESSAGE value="docs(css3/html5): 添加 CSS3 和 HTML5 示例文档&#10;&#10;- 新建 css3-examples 和 html5-examples 文档&#10;- 添加 CSS3 和 HTML5 教程示例内容" />
+    <MESSAGE value="docs: add javascript.md" />
+    <MESSAGE value="docs:补充数据类型和数字运算的示例&#10;&#10;- 在 200.data_type.js 中添加了 Boolean 类型的更多示例&#10;- 在 300.number-operators.js 中添加了 + 运算符进行数字类型转换的示例&#10;- 优化了代码格式和注释，提高了代码可读性" />
+    <MESSAGE value="refactor(javascript): 重构300.operators-number.js&#10;- 修改文件名以更好地反映内容&#10;- 优化代码格式和结构&#10;- 添加数字类型转换操作相关内容" />
+    <MESSAGE value="feat(javascript): 添加逻辑运算符示例代码&#10;&#10;- 新增逻辑运算符（||、&amp;&amp;、??）的示例代码&#10;- 演示了逻辑运算符在不同场景下的使用方法&#10;- 解释了逻辑或赋值、逻辑与赋值、空值合并赋值运算符的用法" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(javascript): 添加逻辑运算符示例代码&#10;&#10;- 新增逻辑运算符（||、&amp;&amp;、??）的示例代码&#10;- 演示了逻辑运算符在不同场景下的使用方法&#10;- 解释了逻辑或赋值、逻辑与赋值、空值合并赋值运算符的用法" />
+  </component>
+</project>
