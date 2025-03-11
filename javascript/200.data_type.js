@@ -33,7 +33,7 @@ let passwd = undefined;
 console.log(passwd, typeof passwd);     // undefined undefined
 
 // 未定义变量 undefined
-console.log(typeof(size));      // undefined
+console.log(typeof(size));          // undefined
 
 console.log(null == undefined);     // true
 
@@ -46,8 +46,8 @@ console.log(isBoss, typeof isBoss); // true boolean
 console.log(!isBoss); // false
 
 console.log(Boolean("ha")); // true
-console.log(Boolean(0));  // false
-console.log(Boolean(1));  // true
+console.log(Boolean(0));    // false
+console.log(Boolean(1));    // true
 console.log(!"a");  // true
 console.log(~!"a"); // false
 

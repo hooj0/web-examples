@@ -25,8 +25,30 @@ let amount = {
     }
 };
 
+
 // --------------------------------------------------------------------
 // 没有valueOf时，toString 也可以进行运算
 // --------------------------------------------------------------------
-console.log(amount + 10);
-console.log(amount - 10);
+console.log(amount + 10);   // 30
+console.log(amount - 10);   // 10
+
+
+// --------------------------------------------------------------------
+// + 运算符进行数字类型转换
+// --------------------------------------------------------------------
+const num = '666';
+console.log(+num);  // 666
+console.log(typeof +num);   // number
+
+const flag = true, bool = false;
+console.log(+flag);  // 1
+console.log(+bool);  // 0
+console.log(typeof +flag);  // number
+
+const age = {
+    toString() {
+        return '22';
+    }
+};
+
+console.log(+age);  // 22
