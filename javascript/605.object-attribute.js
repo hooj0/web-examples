@@ -82,6 +82,8 @@ for (let key in person) {
 console.log(Object.keys(person));   // [ 'name', 'age', 'fullName', 'lastName' ]
 console.log(Object.getOwnPropertyNames(person));    // [ 'name', 'age', 'fullName', 'lastName', 'addr' ]
 console.log(person.addr);    // china
+// 确定属性是否可枚举
+console.log(person.propertyIsEnumerable("addr"));   // false
 
 
 // -----------------------------------------------------------------------------
@@ -129,3 +131,14 @@ console.log(student.info);  // Jane-25-1
 console.log(Object.getOwnPropertyDescriptor(student, 'info'));
 console.log(Object.getOwnPropertyDescriptor(student, 'name'));
 console.log(Object.getOwnPropertyDescriptor(student, 'name').value);
+
+
+// -----------------------------------------------------------------------------
+// for...in 循环迭代对象的 枚举属性。它还会向上遍历 原型 链并枚举继承的属性
+// -----------------------------------------------------------------------------
+const person1 = Object.create(person);
+person1.name = 'Jack';
+Object.defineProperty(person1, 'location', {value: 'china', enumerable: true});
+for (let key in person1) {
+    console.log(key + "-" + person1.hasOwnProperty(key)); // 枚举对象的 自身属性(继承的属性 false)
+}
