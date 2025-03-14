@@ -142,3 +142,24 @@ Object.defineProperty(person1, 'location', {value: 'china', enumerable: true});
 for (let key in person1) {
     console.log(key + "-" + person1.hasOwnProperty(key)); // 枚举对象的 自身属性(继承的属性 false)
 }
+
+
+// -----------------------------------------------------------------------------
+// 对象工厂 & 继承
+// -----------------------------------------------------------------------------
+const method = {
+    sayName() {
+        console.log(this.name);
+    }
+};
+
+function createPerson(name) {
+    const obj = Object.create(method);
+    obj.name = name;
+    return obj;
+}
+
+const person2 = createPerson('Jack');
+const person3 = createPerson('Jane');
+console.log(person2.name);
+console.log(person3.name);
