@@ -82,5 +82,6 @@ const jack = {
 
 sayHello.call(tom, "小明");   // hello, my name is 小明, my age is 18
 sayHello.call(jack, "小红");  // hello, my name is 小红, my age is 20
+sayHello.apply(jack, ["jack"]); // hello, my name is jack, my age is 20
 
 
