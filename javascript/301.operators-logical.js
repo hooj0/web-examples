@@ -43,11 +43,11 @@ const info = {
 };
 
 info.address &&= 'China';
-console.log(info);
+console.log(info);  // { name: 'Jim', age: 20 }
 
 // 仅在 x 为 true和存在时 时才将 y 赋值给 x
 info.name &&= 'USA';
-console.log(info);
+console.log(info);  // { name: 'USA', age: 20 }
 
 
 // --------------------------------------------------------------------
@@ -63,8 +63,8 @@ const data = {
 };
 
 data.address ??= 'China';
-console.log(data);
+console.log(data);  // { name: 'Jim', age: 20, address: 'China' }
 
 // 仅在 x 为 null 或 undefined 时才将 y 赋值给 x
 data.age ??= 18;
-console.log(data);
+console.log(data);  // { name: 'Jim', age: 20, address: 'China' }
