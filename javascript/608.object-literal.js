@@ -45,6 +45,9 @@ const user = {
     'say hallo'() {
         console.log("hello");
     },
+    get [key]() {
+        console.log("get address");
+    },
 };
 
 console.log(user); // { address: 'china', 'tel-address': '1234567890' }
@@ -52,5 +55,7 @@ console.log(user.address); // china
 console.log(user["tel-address"]);  // 1234567890
 console.log(user[key]);  // china
 
-user['say hallo']();
-console.log(user.getAge());
+user['say hallo']();    // hello
+console.log(user.getAge()); // 22
+user.address;   // get address
+user[key];      // get address
