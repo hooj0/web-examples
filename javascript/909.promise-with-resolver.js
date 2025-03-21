@@ -7,3 +7,12 @@
 let { promise, resolve, reject } = Promise.withResolvers();
 
 Math.random() > 0.5 ? resolve("Success") : reject("Failure");
+
+promise.then(
+    (value) => {
+        console.log("成功：", value);
+    },
+    (reason) => {
+        console.log("失败：", reason);
+    }
+).catch(console.error);
