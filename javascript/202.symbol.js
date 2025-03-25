@@ -122,3 +122,54 @@ for (const item of list) {
 // -----------------------------------------------------------------------------
 // 常用符号 - Symbol.isConcatSpreadable 数组连接器
 // -----------------------------------------------------------------------------
+let odd = [1, 3, 5],
+    even = [2, 4, 6];
+
+// 连接数组，返回新数组
+console.log(odd.concat(even));  // [ 1, 3, 5, 2, 4, 6 ]
+console.log(odd);   // [ 1, 3, 5 ]
+console.log(odd.concat(2)); // [ 1, 3, 5, 2 ]
+
+
+let record = {
+    name: "jack",
+    age: 22,
+    1: "symbol",
+    length: 3,
+};
+
+// 连接对象
+console.log([1, 3].concat(record)); // [ 1, 3, { '1': 'symbol', name: 'jack', age: 22, length: 3 } ]
+
+let record2 = {
+    name: "jack",
+    1: "symbol",
+    2: "age",
+    length: 3,
+    [Symbol.isConcatSpreadable]: true
+};
+console.log([3].concat(record2)); // [ 3, <1 empty item>, 'symbol', 'age' ]
+
+
+// -----------------------------------------------------------------------------
+// 常用符号 - Symbol.toPrimitive 对象原型转换
+// -----------------------------------------------------------------------------
+function User(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+User.prototype[Symbol.toPrimitive] = function (hint) {
+    if (hint === 'string') {
+        return `${this.name}`;
+    } else if (hint === 'number') {
+        return this.age;
+    } else {
+        return `${this.name} ${this.age}`;
+    }
+}
+
+const user = new User('jack', 22);
+console.log(user); // User { name: 'jack', age: 22 }
+console.log("age: " + user);    // age: jack
+console.log(String(user));  // jack
