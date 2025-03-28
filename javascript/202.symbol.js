@@ -8,12 +8,12 @@
  *      - 唯一值
  ******************************************************************************/
 let s1 = Symbol();
-console.log(s1);
-console.log(typeof s1);
+console.log(s1);    // Symbol()
+console.log(typeof s1); // symbol
 
 let name = Symbol('name'),
     age = Symbol('age');
-console.log(name, age);
+console.log(name, age); // Symbol(name) Symbol(age)
 
 
 // -----------------------------------------------------------------------------
