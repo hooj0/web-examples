@@ -309,6 +309,8 @@ colors = new Array(5);
 console.log(colors.fill("1", 0, 3));    // [ '1', '1', '1', <2 empty items> ]
 console.log(colors);    // [ '1', '1', '1', <2 empty items> ]
 
+console.log(colors.fill("x")); // [ 'x', 'x', 'x', 'x', 'x' ]
+
 
 // ----------------------------------------------------------------------------
 // 数组排序： sort()
@@ -373,8 +375,75 @@ console.log([].concat(odds, evens));    // [ 1, 3, 5, 2, 4, 6 ]
 // ------------------------------------------------------------------------------
 // 创建数组：of()
 // ------------------------------------------------------------------------------
+const bar = new Array(2);
+console.log(bar);
+console.log(bar.length);
+console.log(bar.fill(1));
+
 console.log(Array.of(7));       // [ 7 ]
 console.log(Array.of(1, 2, 3));  // [ 1, 2, 3 ]
+
+// 如果没有of 方法，可以用下面的方法创建数组
+if (!Array.of) {
+    Array.of = function () {
+        return Array.prototype.slice.call(arguments);
+    }
+}
+
+
+// ------------------------------------------------------------------------------
+// 创建数组：from()
+// ------------------------------------------------------------------------------
+console.log(Array.from("ABCDEFG"));     // [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
+console.log(Array.from("abc", (x) => x.toUpperCase()));     // [ 'A', 'B', 'C' ]
+console.log(Array.from({length: 5}, (x, i) => i)); // [ 0, 1, 2, 3, 4 ]
+
+const doubler = {
+    factor: 2,
+    double(x) {
+        console.log(this); // { factor: 2, double: [Function: double] }
+        return x * this.factor;
+    },
+
+}
+const nums = [1, 2, 3, 4, 5];
+// 参数 doubler 改变doubler.double方法的 this 指向
+console.log(Array.from(nums, doubler.double, doubler)); // [ 2, 4, 6, 8, 10 ]
+
+// 从可迭代对象创建数组
+const even = {
+    *[Symbol.iterator]() {
+        for (let i = 0; i < 10; i += 2) {
+            yield i;
+        }
+    }
+}
+console.log(Array.from(even));  // [ 0, 2, 4, 6, 8 ]
+
+
+// ------------------------------------------------------------------------------
+// 扁平化数组：flat()
+// ------------------------------------------------------------------------------
+const arr = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+console.log(arr.flat());    // [ 1, 2, 3, 4, [ 5, 6, [ 7, 8, [ 9, 10 ] ] ] ]
+// 改变深度
+console.log(arr.flat(2));   // [ 1, 2, 3, 4, 5, 6, [ 7, 8, [ 9, 10 ] ] ]
+console.log(arr.flat(Infinity));   // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+
+const arr2 = [1, 2, , 3, ,];
+// 删除稀疏数组
+console.log(arr2.flat());   // [1, 2, 3]
+
+
+// ------------------------------------------------------------------------------
+// 扁平化数组：flatMap()
+// ------------------------------------------------------------------------------
+const subjects = ["math is JavaScript", , "english", "is", "", "chinese"];
+console.log(subjects.flatMap((x) => x.split(" "))); // [ 'math', 'is', 'JavaScript', 'english', 'is', '', 'chinese' ]
+console.log(subjects.flatMap((x, i, arrays) => {
+    console.log({x, i, arrays});
+    return x.split(" ");
+}));
 
 
 // ------------------------------------------------------------------------------
