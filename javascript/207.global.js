@@ -65,3 +65,9 @@ console.log(Math.round(1.5));    // 2
 // JSON 格式化
 console.log(JSON.stringify({name: 'zhangsan', age: 18})); // {"name":"zhangsan","age":18}
 console.log(JSON.parse('{"name":"zhangsan","age":18}'));    // {name: 'zhangsan', age: 18}
+
+// -----------------------------------------------------------------------------
+// 将 URL 参数 转换为对象
+// -----------------------------------------------------------------------------
+const urls = new URLSearchParams('name=张三&age=20&gender=男');
+console.log(Object.fromEntries(urls)); // { name: '张三', age: '20', gender: '男' }
