@@ -506,3 +506,15 @@ console.log(colors);    // 原始数组未改变
 
 console.log(colors.reverse());  // [ 'blue', 'white', 'yellow', 'black', 'blue' ]
 console.log(colors);    // 改变原始数组
+
+
+// ------------------------------------------------------------------------------
+// 删除或替换数组元素：toSpliced()
+// ------------------------------------------------------------------------------
+colors = ["blue", "white", "yellow", "black", "blue"];
+// 从下标1元素处开始删除 1 个元素
+console.log(colors.toSpliced(1, 1));  // [ 'blue', 'yellow', 'black', 'blue' ]
+// 从下标1元素处开始删除 1 个元素，并替换为 "red"
+console.log(colors.toSpliced(1, 1, "red")); // [ 'blue', 'red', 'yellow', 'black', 'blue' ]
+
+console.log(colors); // 原始数组未改变
