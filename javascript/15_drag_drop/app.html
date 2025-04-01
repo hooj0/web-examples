@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drag and drop</title>
+    <style>
+        .drag-drop-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item {
+            width: 50%;
+            height: 50%;
+            background-color: #EEEFFF;
+            margin: 10px;
+        }
+
+        .drag-drop-box {
+            width: 200px;
+            height: 200px;
+            background-color: #CCC;
+            margin: 10px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .drag-over {
+            border: 3px dashed #888;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Drag and Drop</h1>
+        <div class="drag-drop-container">
+            <div class="drag-drop-box">
+                <div class="item" draggable="true" id="item"></div>
+            </div>
+            <div class="drag-drop-box">
+            </div>
+            <div class="drag-drop-box">
+            </div>
+        </div>
+    </div>
+
+    <script src="./drag_drop.js" type="text/javascript"></script>
+</body>
+</html>
