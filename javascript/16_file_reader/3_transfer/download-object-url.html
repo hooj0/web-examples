@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blob - objectUrl</title>
+</head>
+<body>
+    <script>
+        const blob = new Blob(['Hello World'], {type: 'text/plain'});
+        const url = URL.createObjectURL(blob);
+
+        const download = document.createElement('a');
+        // download.href = url;
+        download.href = "blob:http://localhost:63342/33f2dd43-341c-43a5-af42-26b41d9e8f27";
+        download.download = 'hello.txt';
+        // download.style.display = 'none';
+        download.textContent = 'Download';
+
+        document.body.appendChild(download);
+
+        download.click();
+        document.body.removeChild(download);
+        URL.revokeObjectURL(url);
+    </script>
+</body>
+</html>

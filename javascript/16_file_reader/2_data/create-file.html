@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File</title>
+    <!--
+    创建File对象语法：
+        new File(bits, name, options);
+    参数说明
+        bits: 一个包含文件内容的数组。
+            可以是 ArrayBuffer、Blob、USVString 或其他类似的对象。
+        name: 字符串，表示文件的名称（包括扩展名）。
+        options (可选): 一个配置对象，支持以下属性：
+            type: 文件的 MIME 类型（例如 'image/png'）。
+            lastModified: 文件的最后修改时间（时间戳，单位为毫秒）。
+
+    常见的 MIME 类型如下：
+        类型                  描述
+        text/plain          纯文本文档
+        text/html           HTML文档
+        text/javascript     JavaScript文件
+        text/css            CSS文件
+        application/json    JSON文件
+        application/pdf     PDF文件
+        application/xml     XML文件
+        image/jpeg          JPEG图像
+        image/png           PNG图像
+        image/svg+xml       SVG图像
+        audio/mpeg          MP3文件
+        video/mpeg          MP4文件
+    -->
+</head>
+<body>
+    <script>
+        const file = new File(['Hello World'], 'hello.txt', {type: 'text/plain'});
+
+        console.log(file);
+        console.log(file.name); // hello.txt
+        console.log(file.size); // 11
+        console.log(file.type); // text/plain
+        console.log(file.lastModified); // 1743564015174
+        console.log(file.webkitRelativePath);   // ""
+        console.log(file.lastModifiedDate);     // Thu Dec 07 2025 09:01:
+
+        const json = new File(['{"name": "John"}'], 'data.json', {type: 'application/json'});
+        console.log(json);
+        console.log(json.name);
+
+        const base64 = "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";
+        const bytes = atob(base64);
+        const byteArray = new Array(bytes.length);
+        for (let i = 0; i < bytes.length; i++) {
+            byteArray[i] = bytes.charCodeAt(i);
+        }
+
+        const array = new Uint8Array(byteArray);
+        const image = new File([array], 'image.png', {type: 'image/png'});
+        console.log(image);
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blob - createObjectUrl</title>
+</head>
+<body>
+    <img id="img" src="blob:http://localhost:63342/9fecf3bd-9791-4210-ad37-35adee297f33"/>
+    <script>
+        const image = document.getElementById('img');
+        const canvas = document.createElement('canvas');
+        canvas.width = image.width;
+        canvas.height = image.height;
+
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+        canvas.toBlob(function(blob) {
+            console.log(URL.createObjectURL(blob));
+        });
+    </script>
+</body>
+</html>
