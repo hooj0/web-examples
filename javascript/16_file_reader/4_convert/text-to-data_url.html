@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text - DataUrl</title>
+</head>
+<body>
+    <script>
+        const text = 'Hello World';
+        let binaryString = unescape(encodeURIComponent(text));
+        console.log(binaryString);
+
+        const type = 'text/plain';
+        console.log(`data:${type};base64,${btoa(binaryString)}`);
+    </script>
+</body>
+</html>

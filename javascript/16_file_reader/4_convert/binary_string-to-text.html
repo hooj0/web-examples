@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BinaryString - DataUrl</title>
+</head>
+<body>
+    <script>
+        const reader = new FileReader();
+        reader.readAsBinaryString(new File(['Hello World'], 'hello.txt', {type: 'text/plain'}));
+        reader.onload = function(e) {
+            const binaryString = e.target.result;
+            console.log(decodeURIComponent(escape(binaryString)));
+        }
+    </script>
+</body>
+</html>

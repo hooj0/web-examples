@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataUrl -> BinaryString</title>
+</head>
+<body>
+    <script>
+        const dataUrl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==';
+        const binaryString = atob(dataUrl.split(',')[1]);
+        console.log(binaryString);
+    </script>
+</body>
+</html>

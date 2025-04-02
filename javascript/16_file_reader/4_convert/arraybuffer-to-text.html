@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArrayBuffer -> BinaryString</title>
+</head>
+<body>
+    <script>
+        const reader = new FileReader();
+        reader.readAsArrayBuffer(new File(['Hello World'], 'hello.txt', {type: 'text/plain'}));
+        reader.onload = function(e) {
+            const arrayBuffer = e.target.result; // Hello World
+            const decoder = new TextDecoder('utf-8');
+            console.log(decoder.decode(arrayBuffer));
+
+            console.log(decoder.decode(new Uint8Array(arrayBuffer)));
+        };
+    </script>
+</body>
+</html>

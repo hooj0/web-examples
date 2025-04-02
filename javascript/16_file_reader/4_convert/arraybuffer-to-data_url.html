@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ArrayBuffer -> DataUrl</title>
+</head>
+<body>
+    <script>
+        const reader = new FileReader();
+        reader.readAsArrayBuffer(new File(['Hello World'], 'hello.txt', {type: 'text/plain'}));
+        reader.onload = function(e) {
+            const arrayBuffer = e.target.result; // Hello World
+
+            const bytes = new Uint8Array(arrayBuffer);
+            console.log(bytes);
+            console.log(bytes.buffer);
+            console.log(arrayBuffer);
+            console.log(arrayBuffer == bytes.buffer);   // true
+
+            const byteArray = new Uint8Array(arrayBuffer);
+            const binaryString = byteArray.reduce((data, byte) => data + String.fromCharCode(byte), '');
+            console.log(`data:text/plain;base64,${btoa(binaryString)}`);
+        }
+    </script>
+</body>
+</html>

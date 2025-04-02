@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BinaryString - DataUrl</title>
+</head>
+<body>
+    <script>
+        const reader = new FileReader();
+        reader.readAsBinaryString(new File(['Hello World'], 'hello.txt', {type: 'text/plain'}));
+        reader.onload = function(e) {
+            const binaryString = e.target.result;
+            const type = 'text/plain';
+            console.log(`data:${type};base64,${btoa(binaryString)}`);
+        }
+    </script>
+</body>
+</html>

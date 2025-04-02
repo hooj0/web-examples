@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataUrl -> BinaryString</title>
+</head>
+<body>
+    <script>
+        const blob = new Blob(['Hello World'], {type: 'text/plain'});
+
+        const reader = new FileReader();
+        reader.readAsDataURL(blob);
+        reader.onload = function(e) {
+            const dataUrl = e.target.result; // data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA
+            const binaryString = atob(dataUrl.split(',')[1]);
+            console.log(binaryString);
+
+            const text = decodeURIComponent(escape(binaryString));
+            console.log(text)
+        };
+    </script>
+</body>
+</html>
