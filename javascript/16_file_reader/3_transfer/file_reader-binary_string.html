@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FileReader - BinaryString</title>
+</head>
+<body>
+    <script>
+        const reader = new FileReader();
+        reader.readAsBinaryString(new File(['Hello World'], 'hello.txt', {type: 'text/plain'}));
+        reader.onload = function(e) {
+            console.log(e.target.result); // Hello World
+        }
+    </script>
+</body>
+</html>

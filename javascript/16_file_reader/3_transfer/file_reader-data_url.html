@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Url - FileReader</title>
+</head>
+<body>
+    <script>
+        const file = new File(['Hello World'], 'hello.txt', {type: 'text/plain'});
+        const blob = new Blob(['Hello World'], {type: 'text/plain'});
+
+        const reader = new FileReader();
+        // reader.readAsDataURL(file);
+        reader.readAsDataURL(blob);
+        reader.onload = function(e) {
+            // 输出base64 字符串
+            console.log(e.target.result); // data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA
+            console.log(e, reader);
+        }
+    </script>
+</body>
+</html>

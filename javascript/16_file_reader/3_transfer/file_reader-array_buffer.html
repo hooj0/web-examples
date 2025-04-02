@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FileReader - ArrayBuffer</title>
+</head>
+<body>
+    <script>
+        const reader = new FileReader();
+        reader.readAsArrayBuffer(new File(['Hello World'], 'hello.txt', {type: 'text/plain'}));
+        reader.onload = function(e) {
+            console.log(e.target.result); // Hello World
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Url - canvas</title>
+</head>
+<body>
+    <img id="img" src="blob:http://localhost:63342/ef94a856-a639-40f8-aebe-7a28b1fed1c7"/>
+    <script>
+        const image = document.getElementById('img');
+        const canvas = document.createElement('canvas');
+        canvas.width = image.width;
+        canvas.height = image.height;
+
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+        let dataURL = canvas.toDataURL(); // 获取 base64 字符串
+
+        // 输出base64 字符串
+        console.log(dataURL);   // data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA
+    </script>
+</body>
+</html>
