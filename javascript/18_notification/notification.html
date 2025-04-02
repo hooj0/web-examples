@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notification 通知</title>
+</head>
+<body>
+    <script>
+        (async () => {
+            const notify = new Notification("最新通知", {
+                body: "放假通知，各部门放假3天",
+                icon: "./ico.jpg",
+                vibrate: true
+            });
+
+            setTimeout(() => {
+                notify.close();
+            }, 10 * 1000);
+
+            notify.onclick = () => {
+                alert("点击了通知");
+            };
+        })();
+
+        console.log(Notification.permission);
+    </script>
+</body>
+</html>
