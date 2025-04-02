@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input - drag and drop File</title>
+</head>
+<body>
+    <div id="drag" style="border: 1px solid red; height: 500px;"></div>
+    <script>
+        document.getElementById('drag').ondrop = function(e) {
+            e.preventDefault();
+            console.log(e.dataTransfer.files);
+        };
+
+        document.getElementById('drag').ondragover = function(e) {
+            e.preventDefault();
+        };
+    </script>
+</body>
+</html>

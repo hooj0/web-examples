@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input - canvas</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        document.getElementById('canvas').toBlob(function(blob) {
+            console.log('canvas blob:', blob);
+        });
+    </script>
+</body>
+</html>

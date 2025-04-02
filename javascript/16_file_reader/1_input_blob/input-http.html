@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input - fetch Http</title>
+</head>
+<body>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/posts').then(response => {
+            console.log(response);
+            console.log(response.blob());
+        });
+    </script>
+</body>
+</html>
