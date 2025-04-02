@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BinaryString - Blob</title>
+</head>
+<body>
+    <script>
+        const text = 'Hello World';
+        const encoder = new TextEncoder();
+        // 解码字符
+        let binaryString = encoder.encode(text);
+        const arrayBuffer = binaryString.buffer;
+        const mimeType = 'text/plain';
+        const blob = new Blob([arrayBuffer], {type: mimeType});
+        console.log(blob);
+
+        // 原生字符串
+        binaryString = "hello";
+        const ab = new ArrayBuffer(binaryString.length);
+        const ia = new Uint8Array(ab);
+        for (let i = 0; i < binaryString.length; i++) {
+            ia[i] = binaryString.charCodeAt(i);
+        }
+        const blob2 = new Blob([ia], {type: mimeType});
+        console.log(blob2);
+    </script>
+</body>
+</html>

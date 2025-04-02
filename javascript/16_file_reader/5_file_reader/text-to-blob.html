@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text - Blob</title>
+</head>
+<body>
+    <script>
+        const text = 'Hello World';
+        const mimeType = 'text/plain';
+        const blob = new Blob([text], {type: mimeType});
+        console.log(blob);
+    </script>
+</body>
+</html>
