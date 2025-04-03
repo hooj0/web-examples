@@ -70,6 +70,12 @@ console.log(Number.MAX_VALUE, Number.MIN_VALUE);    // 1.7976931348623157e+308 5
 console.log(Number.MAX_VALUE * 2);  // Infinity
 console.log(-Number.MAX_VALUE * 2); // -Infinity
 
+// 类型转换
+console.log(Number(true));  // 1
+console.log(Number("123")); // 123
+console.log(Number("1.22"));    // 1.22
+console.log("4" / "2");     // 2
+
 // 八进制
 // 八进制数字包含不在 0 到 7 范围内的数字，则 JavaScript 引擎会忽略 0 并将该数字视为十进制数字
 let octal = 0o12;
@@ -114,6 +120,9 @@ console.log(str, str2);     // Hello World
 
 str2 = 'World!';
 console.log(str, str2);     // Hello World!
+
+console.log(String(true));  // "true"
+console.log(String(123));   // "123"
 
 // 无法修改字符串数据
 str2[0] = 'w';
