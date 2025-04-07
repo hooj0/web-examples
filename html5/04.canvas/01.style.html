@@ -26,6 +26,29 @@
     -->
 </head>
 <body>
+    <canvas id="canvas" width="300" height="300" style="border: 1px solid red;"></canvas>
+    <script>
+        (function () {
+            let canvas = document.getElementById('canvas');
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(10, 10, 100, 100);
+        })();
+    </script>
 
+    <canvas id="canvas2" width="300" height="300" style="border: 1px solid red;"></canvas>
+    <script>
+        (function () {
+            let canvas2 = document.getElementById('canvas2');
+            let ctx2 = canvas2.getContext('2d');
+
+            let gradient = ctx2.createLinearGradient(0, 0, 0, 220);
+            gradient.addColorStop(0, 'black');
+            gradient.addColorStop(1, 'white');
+
+            ctx2.fillStyle = gradient;
+            ctx2.fillRect(10, 10, 200, 200);
+        })();
+    </script>
 </body>
 </html>

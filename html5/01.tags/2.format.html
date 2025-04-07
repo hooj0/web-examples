@@ -52,10 +52,12 @@
 </head>
 <body>
     <h1>abbr</h1>
+    <pre>定义缩写词或首字母缩略词</pre>
     <hr/>
     <p><abbr title="Hyper Text Markup Language">HTML</abbr> is the standard markup language for creating Web pages.</p>
 
     <h1>address</h1>
+    <pre>定义文档作者或拥有者的联系信息</pre>
     <hr/>
     <address>
     Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
@@ -66,10 +68,57 @@
     </address>
 
     <h1>bdi</h1>
+    <pre>离了一部分文本，这部分文本可能在方向上与外部其他文本不同</pre>
     <hr/>
     <p dir="ltr">
         <bdi>This text is written in English, in a right-to-left language.</bdi>
     </p>
 
+    <h1>bdo</h1>
+    <pre>覆盖当前的文本方向，以相反的方向显示文本，形成镜像模式</pre>
+    <hr/>
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+
+    <h1>blockquote</h1>
+    <pre>定义长的引用</pre>
+    <hr/>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 50 years, WWF has been protecting the future of nature.
+        The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+    </blockquote>
+
+    <h1>cite</h1>
+    <pre>定义作品的标题</pre>
+    <hr/>
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+    <p><cite>这是标题</cite> 这可是段落文本。</p>
+
+    <h1>code</h1>
+    <pre>定义代码</pre>
+    <hr/>
+    <pre>
+        <code>
+            x = function(y) {
+                return y + 2;
+            }
+        </code>
+    </pre>
+
+    <h1>del</h1>
+    <pre>已从文档中删除的文本。浏览器通常会在删除的文本上划线。</pre>
+    <hr/>
+    <p>My favorite color is <del>blue</del> red.</p>
+
+    <h1>dfn</h1>
+    <pre>规定要在内容中定义的术语</pre>
+    <hr/>
+    <p><dfn>HTML</dfn> 是用于创建网页的标准标记语言。</p>
+    <p><dfn title="HyperText Markup Language">HTML</dfn> 是用于创建网页的标准标记语言。</p>
+    <p><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> 是用于创建网页的标准标记语言。</p>
+
+    <h1>em</h1>
+    <pre>定义强调文本</pre>
+    <hr/>
+    <p><em>强调文本</em></p><p>你<em>必须</em>快点！</p>
 </body>
 </html>
