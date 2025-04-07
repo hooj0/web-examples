@@ -120,5 +120,38 @@
     <pre>定义强调文本</pre>
     <hr/>
     <p><em>强调文本</em></p><p>你<em>必须</em>快点！</p>
+
+    <h1>mark</h1>
+    <pre>定义应标记或突出显示的文本</pre>
+    <hr/>
+    <p>今天不要忘记买<mark>牛奶</mark>哦</p>
+
+    <h1>meter</h1>
+    <pre>定义已知范围内的标量测量值，或分数值。也被称为仪表 (gauge)</pre>
+    <hr/>
+    <p>
+        <meter value="0.5">50%</meter>
+        <label for="disk_c">磁盘使用情况 C：</label>
+        <meter id="disk_c" value="2" min="0" max="10">十分之二</meter><br>
+
+        <label for="disk_d">磁盘使用情况 D:</label>
+        <meter id="disk_d" value="0.6">60%</meter>
+    </p>
+
+    <h1>progress</h1>
+    <pre>定义任务进度</pre>
+    <hr/>
+    <p>
+        <label for="file">下载文件进度：</label>
+        <progress id="file" value="32" max="100">32%</progress>
+    </p>
+
+    <h1>template</h1>
+    <pre>定义用作容器的页面加载时隐藏的内容</pre>
+    <hr/>
+    <template>
+        <h1>Hello World!</h1>
+        <p>This is a template.</p>
+    </template>
 </body>
 </html>

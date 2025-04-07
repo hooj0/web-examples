@@ -20,6 +20,45 @@
     -->
 </head>
 <body>
+    <h1>map & area</h1>
+    <pre>图片增加链接</pre>
+    <hr/>
 
+    <img src="https://www.w3school.com.cn/i/photo/life.png" alt="Life" usemap="#lifemap" width="650" height="451">
+    <map name="lifemap">
+        <area shape="rect" coords="10,208,155,338" alt="AirPods" href="https://www.w3school.com.cn/i/map/airpods.png">
+        <area shape="rect" coords="214,65,364,365" alt="iPhone" href="https://www.w3school.com.cn/i/map/iphone.png">
+        <area shape="circle" coords="570,291,75" alt="Coffee" href="https://www.w3school.com.cn/i/map/coffee.png">
+    </map>
+
+    <h1>figcaption & figure</h1>
+    <pre>图片增加标题</pre>
+    <hr/>
+    <figure>
+        <img src="https://www.w3school.com.cn/i/photo/life.png" alt="郁金香" style="width: 300px;">
+        <figcaption>图 1 - 郁金香，百合科，多年生草本植物。</figcaption>
+    </figure>
+
+    <h1>picture</h1>
+    <pre>调整浏览器窗口大小可加载不同的图像</pre>
+    <hr/>
+    <picture>
+        <source media="(min-width:1050px)" srcset="https://www.w3school.com.cn/i/map/airpods.png">
+        <source media="(min-width:465px)" srcset="https://www.w3school.com.cn/i/map/coffee.png">
+        <img src="https://www.w3school.com.cn/i/photo/life.png" alt="Flowers" style="width:auto;">
+    </picture>
+
+    <h1>svg</h1>
+    <pre>SVG 图形的容器</pre>
+    <hr/>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+
+    <svg width="300" height="200">
+        <polygon points="100,10 40,198 190,78 10,78 160,198"
+                 style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+        抱歉，您的浏览器不支持内联 SVG。
+    </svg>
 </body>
 </html>
