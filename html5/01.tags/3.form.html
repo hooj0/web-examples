@@ -27,10 +27,53 @@
     <h1>output</h1>
     <pre>表示计算的结果</pre>
     <hr/>
-    <output name="x" for="a b c">
-        <input id="a" type="number" value="100" /> +
-        <input id="b" type="number" value="50" /> +
-        <input id="c" type="number" value="25" /> =
-    </output>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" id="a" value="50">
+        +<input type="number" id="b" value="25">
+        =<output name="x" for="a b"></output>
+    </form>
+
+    <h1>datalist</h1>
+    <pre>规定输入控件的预定义选项列表</pre>
+    <hr/>
+    <label for="browser">请从列表中选择您的浏览器：</label>
+    <input list="browsers" name="browser" id="browser">
+
+    <datalist id="browsers">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+
+    <h1>input</h1>
+    <pre>输入控件</pre>
+    <hr/>
+    <div>
+        按钮：<input type="button" value="按钮"> <br/>
+        复选框：<input type="checkbox" checked>  <br/>
+        单选框：<input type="radio">  <br/>
+        颜色选择器：<input type="color">  <br/>
+        日期：<input type="date">  <br/>
+        日期时间：<input type="datetime-local">  <br/>
+        时间：<input type="time">  <br/>
+        年月：<input type="month">  <br/>
+        周：<input type="week">  <br/>
+        邮箱：<input type="email">  <br/>
+        文件：<input type="file">  <br/>
+        隐藏字段：<input type="hidden">  <br/>
+        图片：<input type="image" src="https://www.w3school.com.cn/i/map/airpods.png" value="图片">  <br/>
+        数字：<input type="number">  <br/>
+        密码：<input type="password">  <br/>
+        区间：<input type="range">  <br/>
+        搜索：<input type="search">  <br/>
+        重置按钮：<input type="reset">  <br/>
+        提交按钮：<input type="submit">  <br/>
+        电话：<input type="tel">  <br/>
+        文本：<input type="text">（默认值）  <br/>
+        地址：<input type="url">  <br/>
+    </div>
+
 </body>
 </html>
