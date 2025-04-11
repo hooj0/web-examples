@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - radius 圆角</title>
+
+    <style>
+        .box-radius {
+            width: 200px;
+            height: 200px;
+            background-color: #f66;
+            border-radius: 10px;
+        }
+
+        /* 圆形 */
+        .rotund-radius {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            border-radius: 50%;
+        }
+
+        /* 定义区域不规则圆角 */
+        .area-radius {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            border-radius: 10px 50% 30px 50%;
+        }
+
+        /* 定义每个角的圆角 */
+        .rect-radius {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-radius">方形</div>
+
+    <div class="rotund-radius">圆形</div>
+
+    <div class="area-radius">不规则区域</div>
+
+    <div class="rect-radius">矩形</div>
+</body>
+</html>

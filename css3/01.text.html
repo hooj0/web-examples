@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS - Text</title>
+
+    <!--
+    CSS 文本 - 相关属性
+    以下是我们讨论过的所有属性的快速参考表：
+    ===============================================================================
+    属性	                        描述
+    -------------------------------------------------------------------------------
+    color                       设置文本颜色
+    text-align                  指定文本的水平对齐方式
+    vertical-align              设置内联或表格单元格框的垂直对齐
+    direction                   指定文本方向/书写方向
+    text-decoration             指定添加到文本的装饰
+    text-decoration-skip        指定影响元素的文本装饰应该跳过的元素内容部分
+    text-decoration-skip-ink    指定如何绘制覆盖字母上升部和下降部的上划线和下划线
+    text-transform              控制文本的大小写
+    text-emphasis               将强调标记应用于文本
+    text-indent                 指定文本块中第一行的缩进
+    letter-spacing              增加或减少字符间的空间
+    word-spacing                增加或减少单词间的空白空间
+    white-space                 指定如何处理元素内的空白空间
+    text-shadow                 给文本添加阴影
+    line-break                  指定如何/是否断行
+    word-break                  指定非CJK脚本的断行规则
+    -------------------------------------------------------------------------------
+    -->
+
+    <style>
+        .arabic-text {
+            direction: rtl; /* 从左到右 */
+        }
+        .english-text {
+            direction: ltr; /* 从右到左 */
+        }
+
+
+        .underline {
+            text-decoration: underline; // 下划线
+        }
+        .overline {
+            text-decoration: overline;  // 上划线
+        }
+        .line-through {
+            text-decoration: line-through; // 删除线
+        }
+        .no-decoration {
+            text-decoration: none; // 无修饰
+        }
+
+        .text-decoration-skip {
+            text-decoration: underline;
+            text-decoration-skip-ink: auto;
+            text-decoration-skip-spaces: all;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .lowercase {
+            text-transform: lowercase;
+        }
+        .capitalize {
+            text-transform: capitalize;
+        }
+
+        .emphasis {
+            text-emphasis: filled;
+            text-emphasis-position: over right;
+        }
+    </style>
+</head>
+<body>
+    <h3>direction - 文本排序</h3>
+    <p class="arabic-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque blanditiis consectetur consequuntur,</p>
+    <p class="english-text">doloremque eaque eos esse est fugiat hic impedit incidunt inventore ipsam iusto labore laudantium molestiae</p>
+    <hr/>
+
+    <h3>text-decoration - 文本修饰</h3>
+    <p class="underline">consectetur adipisicing elit</p>
+    <p class="overline">consectetur adipisicing elit</p>
+    <p class="line-through">consectetur adipisicing elit</p>
+    <p class="no-decoration ">consectetur adipisicing elit</p>
+    <hr/>
+
+    <h3>text-decoration-skip - 文本修饰跳过</h3>
+    <p class="text-decoration-skip">consectetur adipisicing elit</p>
+    <hr/>
+
+    <h3>text-transform - 文本转换</h3>
+    <p class="uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    <p class="lowercase">Lorem ipsum dolor sit amet, CONSECTETUR adipisicing elit. </p>
+    <p class="capitalize">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+    <hr/>
+
+    <h3>text-emphasis - 文本强调</h3>
+    <p class="emphasis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</body>
+</html>
