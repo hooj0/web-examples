@@ -13,8 +13,91 @@
     border-image-outset         指定边框图像区域超出边框盒子的量            长度, 数值
     ----------------------------------------------------------------------------------
     -->
+    <style>
+        .bordered-el {
+            width: 300px;
+            height: 200px;
+            border: 15px solid transparent;
+            border-image-source: url("https://www.w3school.com.cn/i/map/airpods.png");
+            border-image-slice: 30;
+            border-image-repeat: round;
+        }
+
+        .bordered-el2 {
+            width: 400px;
+            height: 300px;
+            border: 100px solid transparent;
+            border-image-source: url("https://www.w3school.com.cn/i/map/airpods.png");
+            border-image-slice: 10;
+            /* 图像在边框周围很好地平铺 */
+            border-image-repeat: round;
+        }
+
+        .linear-gradient-border {
+            width: 300px;
+            height: 200px;
+            border: 15px solid transparent;
+            /* 结尾的 1 告诉浏览器将渐变裁剪成一个 1x1 的网格，实际上是将整个渐变用作我们的边框。 */
+            /* 1：表示不切割图像，直接拉伸 */
+            border-image: linear-gradient(45deg, red, blue) 1;
+        }
+
+        .redial-gradient-border {
+            width: 300px;
+            height: 200px;
+            border: 15px solid transparent;
+            border-image: radial-gradient(circle, yellow, orangered) 10;
+        }
+
+        .conic-gradient-border {
+            width: 300px;
+            height: 200px;
+            border: 15px solid transparent;
+            /* from 45deg 指定渐变从45度开始，颜色依次开始变换 */
+            /* 结尾10 边框斜切角度 */
+            border-image: conic-gradient(from 45deg, red, yellow, green, blue, black) 10;
+        }
+
+        .fancy-box {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 20px solid transparent;
+            /*border-image: linear-gradient(45deg, gold, transparent 75%);*/
+            /*border-image: radial-gradient(circle at top left, purple, transparent 75%);*/
+            border-image: conic-gradient(from 45deg, crimson, indigo, violet, crimson);
+            border-image-slice: 1;
+        }
+    </style>
 </head>
 <body>
+    <div class="bordered-el">
+        <p>这是边框</p>
+    </div>
 
+    <div class="bordered-el2">
+        <p>这是边框</p>
+    </div>
+
+    <div class="linear-gradient-border">
+        <p>渐变边框</p>
+    </div>
+
+    <div class="redial-gradient-border">
+        <p>径向渐变，从中间向四周渐变扩散</p>
+    </div>
+
+    <div class="conic-gradient-border">
+        <p>圆锥渐变，从顶部向底部渐变扩散</p>
+    </div>
+
+    <hr/>
+    <div class="fancy-box">
+        <h2>欢迎来到 CSS 边框图像的世界！</h2>
+        <p>这难道不令人惊叹吗？</p>
+    </div>
+
+    <hr/>
 </body>
 </html>
