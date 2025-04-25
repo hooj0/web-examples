@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <title>CSS3 - 多背景 Background</title>
     <!--
-
+    属性	                            描述
+    =====================================================================
+    background-image                设置一个或多个背景图像
+    background-position             设置每个背景图像的起始位置
+    background-size                 指定背景图像的大小
+    background-repeat               设置背景图像的重复方式
+    background-origin               指定背景图像的位置区域
+    background-clip                 定义背景在元素内部应该扩展多远
+    background-attachment           设置背景图像是随页面滚动还是固定
+    ---------------------------------------------------------------------
     -->
 
     <style>
@@ -12,16 +21,83 @@
             width: 300px;
             height: 200px;
             background-image: url("https://www.w3school.com.cn/i/map/airpods.png"), url("https://www.w3school.com.cn/i/photo/life.png");
-            background-repeat: no-repeat, no-repeat;
+            background-repeat: no-repeat, repeat;
             background-position: center center, top left;
+            background-size: 150px 150px, cover;
         }
 
+        .bg-short-hand {
+            width: 300px;
+            height: 200px;
+            background: url("https://www.w3school.com.cn/i/map/airpods.png") no-repeat center / 100px, linear-gradient(to bottom, #f00, #00f) no-repeat center / cover;
+        }
+
+        .bg-full {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.w3school.com.cn/i/map/airpods.png") no-repeat center center / cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+        }
+
+        .bg-hero {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url("https://www.w3school.com.cn/i/photo/life.png") no-repeat center center / cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 2em;
+        }
+
+        .bg-origin {
+            background-image: url("https://www.w3school.com.cn/i/photo/life.png");
+            background-origin: content-box, padding-box, border-box;
+            background-repeat: no-repeat;
+            border: 10px dashed black;
+            padding: 20px;
+        }
+
+        .bg-clip {
+            background-image: url("https://www.w3school.com.cn/i/photo/life.png"), url("https://www.w3school.com.cn/i/map/airpods.png");
+            background-clip: content-box, padding-box;
+            border: 10px solid rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
-
     <div class="bg-image">
         <p>多背景</p>
     </div>
+    <hr/>
+
+    <div class="bg-short-hand">
+        <p>带背景演示和图片的多背景</p>
+    </div>
+    <hr/>
+
+    <div class="bg-full">
+        <p>全尺寸背景</p>
+    </div>
+    <hr/>
+
+    <div class="bg-hero">
+        <p>Hero背景</p>
+    </div>
+    <hr/>
+
+    <div class="bg-origin">
+        <p>背景图像的位置</p>
+    </div>
+    <hr/>
+
+    <div class="bg-clip">
+        <p>背景应该扩展多远</p>
+    </div>
+    <hr/>
 </body>
 </html>
