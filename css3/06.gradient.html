@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Linear gradient 渐变</title>
+    <!--
+     函数                                 描述
+    ================================================================================
+    repeating-linear-gradient()          创建一个重复的线性渐变
+    repeating-radial-gradient()          创建一个重复的径向渐变
+    repeating-conic-gradient()           创建一个重复的锥形渐变
+    image()                              生成一个图像值
+    image-set()                          允许你为不同的显示分辨率提供多个图像源
+    --------------------------------------------------------------------------------
+
+    语法：
+    ================================================================================
+    渐变类型                基本语法
+    线性              linear-gradient([方向,] 颜色1, 颜色2, ...)
+    径向              radial-gradient([形状大小在位置,] 颜色1, 颜色2, ...)
+    锥形              conic-gradient([从角度,] 颜色1, 颜色2, ...)
+    --------------------------------------------------------------------------------
+    -->
+
+    <style>
+        body {
+            color: white;
+        }
+
+        .line-gradient {
+            /* 改变方向，从 red 到 yellow */
+            background: linear-gradient(to right, red, yellow);
+        }
+
+        .deg-gradient {
+            width: 200px;
+            height: 200px;
+            /* 45度角对角线方向的渐变 */
+            background: linear-gradient(45deg, blue, green);
+        }
+
+        .radial-gradient {
+            width: 200px;
+            height: 200px;
+            /* 径向渐变就像圆形的彩虹，颜色从一个中心点辐射出来 */
+            background: radial-gradient(circle, red, yellow, green);
+        }
+
+        .conic-gradient {
+            width: 200px;
+            height: 200px;
+            /* 锥形渐变就像一个扇形，颜色从一个中心点辐射出来 */
+            background: conic-gradient(red, yellow, green, blue, red);
+        }
+
+        .border {
+            width: 300px;
+            height: 50px;
+            color: black;
+        }
+
+        .border-gradient {
+            border: 10px solid;
+            /* 边框渐变 */
+            border-image: linear-gradient(to right, yellow, green) 1;
+        }
+
+        .color-stop {
+            /* 定位颜色断点: 具有特定颜色过渡的渐变，分别在元素宽度的20%、40%、60%和80% */
+            background: linear-gradient(to right, red 20%, yellow 30%, green 50%, blue 75%, red 100%);
+        }
+
+        .hard-line {
+            /* 硬边线： 颜色断点在元素宽度的50%处 */
+            background: linear-gradient(to right, red 50%, yellow 50%);
+        }
+
+        .color-band {
+            /* 颜色带： 颜色断点在元素宽度的25%、50%、75%处 */
+            background: linear-gradient(to right, red 25%, yellow 25% 50%, green 50% 75%, blue 75%);
+        }
+
+        .stacked-gradients {
+            height: 50px;
+            background: linear-gradient(to right, rgba(255,0,0,0.5), rgba(255,0,0,0)),
+                        linear-gradient(to bottom, rgba(0,0,255,0.5), rgba(0,0,255,0));
+            /* 堆叠渐变, 效果不佳 */
+            /*background: linear-gradient(to right, red, yellow),*/
+            /*            linear-gradient(to bottom, green, yellow);*/
+        }
+    </style>
+</head>
+<body>
+    <div class="line-gradient">
+        线性渐变
+    </div>
+
+    <div class="deg-gradient">
+        线性 角度 渐变
+    </div>
+
+    <div class="radial-gradient">
+        径向渐变
+    </div>
+
+    <div class="conic-gradient">
+        锥形渐变
+    </div>
+    <hr/>
+
+    <div class="border border-gradient">
+        边框渐变
+    </div>
+    <hr/>
+
+    <div class="color-stop">
+        定位颜色断点
+    </div>
+    <hr/>
+
+    <div class="hard-line">
+        硬边线
+    </div>
+    <hr/>
+
+    <div class="color-band">
+        颜色带
+    </div>
+    <hr/>
+
+    <div class="stacked-gradients">
+        堆叠渐变
+    </div>
+    <hr/>
+</body>
+</html>

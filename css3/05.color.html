@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Color 颜色</title>
+    <!--
+    颜色值类型           示例                          描述
+    ========================================================================
+    关键字            red, blue, green             预定义的颜色名称
+    十六进制          #FF0000, #00FF00             表示RGB值的6位代码
+    RGB             rgb(255, 0, 0)                红色、绿色、蓝色值（0-255）
+    RGBA            rgba(255, 0, 0, 0.5)          RGB加上透明度通道
+    HSL             hsl(0, 100%, 50%)             色相、饱和度、亮度
+    HSLA            hsla(0, 100%, 50%, 0.5)       HSL加上透明度通道
+    ------------------------------------------------------------------------
+    -->
+
+    <style>
+        /* 改变光标颜色 */
+        input {
+            caret-color: red;
+        }
+
+        /* 颜色继承 */
+        .c-parent {
+            color: red;
+        }
+
+        .c-child {
+            /* 直接使用 父元素颜色 */
+            color: inherit;
+        }
+
+        /* 颜色透明，没有背景颜色 */
+        .transparent-color {
+            background-color: transparent;
+            border: 1px solid black;
+        }
+
+        .transparent-color:hover {
+            background-color: rgba(255, 0, 0, 0.1);
+        }
+
+        /* 改变颜色，currentColor 边框颜色 根据当前文本颜色改变 */
+        .change-color {
+            color: green;
+            border: 2px solid currentColor;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <input type="text" placeholder="改变光标颜色"/>
+    </div>
+    <hr/>
+
+    <div class="c-parent">
+        父元素
+        <div class="c-child">
+            颜色继承
+        </div>
+    </div>
+    <hr/>
+
+    <div class="transparent-color">
+        颜色透明，没有背景颜色
+    </div>
+    <hr/>
+
+    <div class="change-color">
+        边框颜色 根据当前文本颜色改变
+    </div>
+    <hr/>
+</body>
+</html>
