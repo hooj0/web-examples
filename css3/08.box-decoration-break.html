@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - box-decoration-break 盒子装饰断裂</title>
+    <!--
+    box-decoration-break: clone | slice;
+    -------------------------------------------------------------------
+    值               描述
+    ===================================================================
+    slice           这是默认值。它将元素视为一个连续的框。
+    clone           这会为每个框片段创建装饰的副本。
+    -------------------------------------------------------------------
+    -->
+    <style>
+        .slice-text {
+            width: 400px;
+            padding: 5px;
+            line-height: 2;
+            background-color: #ffcc00;
+            /* 它将元素视为一个连续的框，在内容断裂时切割装饰 */
+            box-decoration-break: slice;
+        }
+
+        .clone-text {
+            width: 400px;
+            padding: 5px;
+            line-height: 2;
+            border: 2px solid #ffcc00;
+            background-color: #33cc33;
+            /* 这会为每个框片段创建装饰的副本：背景、边框和内边距都会单独应用于每行 */
+            box-decoration-break: clone;
+        }
+
+        /*多列布局中的断裂*/
+        .multi-col {
+            /* 以下样式用于创建三列布局，设置列间距和容器宽度 */
+            column-count: 3;
+            column-gap: 20px;
+            width: 100%;
+        }
+
+        .decorated-text {
+            background-color: #ff9999;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            padding: 10px;
+            box-decoration-break: clone;
+        }
+    </style>
+</head>
+<body>
+    <p class="slice-text">Learning is not attained by chance; it must be sought for with ardor and attended to with diligence. The only way to achieve the impossible is to believe it is possible.</p>
+    <p class="clone-text">Learning is not attained by chance; it must be sought for with ardor and attended to with diligence. The only way to achieve the impossible is to believe it is possible.</p>
+
+    <div class="multi-col">
+        <p class="decorated-text">这是一段较长的文本，它将跨越多列。我们将看到 box-decoration-break 如何影响内容在列之间分割时的外观。You're not obligated to win. You're obligated to keep trying. To the best you can do everyday. The only way to achieve the impossible is to believe it is possible.</p>
+    </div>
+</body>
+</html>

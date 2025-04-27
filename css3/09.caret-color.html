@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Caret_Color 光标颜色</title>
+    <!--
+    光标颜色应用于 input 和 textarea 输入的地方。
+    --------------------------------------------------------------------------
+    值                               描述
+    ==========================================================================
+    auto                            默认颜色（通常是黑色）
+    transparent                     使光标不可见
+    currentcolor                    使用当前文本颜色
+                                    任何有效的CSS颜色值
+    --------------------------------------------------------------------------
+    -->
+
+    <style>
+        /* 默认颜色（通常是黑色） */
+        .auto-color {
+            caret-color: auto;
+        }
+
+        /* 使光标不可见 */
+        .transparent-color {
+            caret-color: transparent;
+        }
+
+        /* 使用当前文本颜色 */
+        div[contenteditable="true"] {
+            color: blue;
+            caret-color: currentcolor;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="请输入" class="auto-color"/>
+    <textarea placeholder="请输入" class="transparent-color"></textarea>
+
+    <div contenteditable="true">Learning is not attained by chance</div>
+</body>
+</html>
