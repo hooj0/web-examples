@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Function 函数</title>
+    <style>
+        body {
+            padding: 3em;
+        }
+
+        .rotate-box {
+            /* 旋转 */
+            transform: rotate(45deg);
+            border: 1px solid red;
+            width: 100px;
+        }
+
+        .scale-box {
+            border: 1px solid red;
+            width: 100px;
+            transition: transform 0.5s ease;
+        }
+
+        .scale-box:hover {
+            /* 缩放 */
+            transform: scale(1.5);
+        }
+
+        .calc-box {
+            /* 算术函数：会动态调整宽度 */
+            width: calc(10% + 100px);
+            border: 1px solid red;
+        }
+
+        .filter-box {
+            /* 模糊函数 */
+            filter: blur(2px);
+            background-color: #3498db;
+            width: 100px;
+        }
+
+        .rgba-box {
+            /* 透明函数 */
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .circle-box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            clip-path: circle(50%);
+        }
+
+        .grid-box {
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .cubic-bezier-box {
+            border: 1px solid red;
+            transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="rotate-box">
+        旋转函数
+    </div>
+    <hr/>
+
+    <div class="scale-box">
+        缩放函数
+    </div>
+    <hr/>
+
+    <div class="calc-box">
+        算术函数
+    </div>
+    <hr/>
+
+    <div class="filter-box">
+        模糊函数
+    </div>
+    <hr/>
+
+    <div class="rgba-box">
+        透明函数
+    </div>
+    <hr/>
+
+    <div class="circle-box">
+        圆形函数
+    </div>
+    <hr/>
+
+    <div class="grid-box">
+        布局函数
+    </div>
+    <hr/>
+
+    <div class="cubic-bezier-box">
+        平滑过渡
+    </div>
+</body>
+</html>

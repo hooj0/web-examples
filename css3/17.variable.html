@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Variable 变量</title>
+    <!--
+    --------------------------------------------------------------------------------------------------
+    方法                                      描述
+    ==================================================================================================
+    声明                                      --变量名: 值;
+    使用                                      属性: var(--变量名);
+    全局作用域                                 使用 :root 伪类
+    继承                                      变量从父元素继承
+    备用值                                     var(--变量名, 备用值)
+    JavaScript 设置                           element.style.setProperty('--var-name', value)
+    JavaScript 获取                           getComputedStyle(element).getPropertyValue('--var-name')
+    --------------------------------------------------------------------------------------------------
+    -->
+    <style>
+        :root {
+            --main-color: #ccc;
+        }
+
+        .button {
+            background-color: var(--main-color);
+        }
+
+        .container {
+            --padding: 20px;
+            --font-size: 25px;
+        }
+
+        .box {
+            padding: var(--padding);
+            font-size: var(--font-size);
+        }
+
+        .var-default {
+            width: 100px;
+            background-color: var(--default-color, red);
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Click me</button>
+    <hr/>
+
+    <div class="container box">变量</div>
+    <hr/>
+
+    <div class="var-default">变量默认值</div>
+    <hr/>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Tool tip 工具提示</title>
+    <!--
+
+    -->
+
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border: 1px dotted black;
+            margin: 100px;
+        }
+
+        .tooltip-text {
+            width: 100px;
+            visibility: hidden;
+            text-align: center;
+            background-color: black;
+            color: #ccc;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            left: 50%;
+            bottom: 125%;
+            z-index: 1;
+            margin-left: -60px;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="tooltip">
+        悬停鼠标提示
+        <span class="tooltip-text">这是提示信息</span>
+    </div>
+</body>
+</html>

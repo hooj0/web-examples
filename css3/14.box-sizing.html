@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Box sizing 盒子模型大小</title>
+    <!--
+    -----------------------------------------------------------------------
+    值                       描述
+    =======================================================================
+    content-box             这是默认值。宽度和高度仅适用于元素的内容。
+    border-box              宽度和高度包括内容、内边距和边框。
+    inherit                 元素从其父元素继承box-sizing值。
+    -----------------------------------------------------------------------
+    -->
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            background-color: #ccc;
+            box-sizing: content-box;
+        }
+
+        .border-box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .content-box {
+            width: 100%;
+        }
+
+        .box-col {
+            width: 50%;
+            padding: 20px;
+            float: left;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">盒子模型 content-box</div>
+    <hr/>
+
+    <div class="border-box">盒子模型 border-box</div>
+    <hr/>
+
+    <div class="content-box">
+        <div class="box-col">1</div>
+        <div class="box-col">2</div>
+    </div>
+</body>
+</html>

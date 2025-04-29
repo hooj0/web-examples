@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Button 按钮</title>
+    <style>
+        .basic-button  {
+            background-color: green;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+
+            border-radius: 12px;
+            border: 2px solid yellow;
+        }
+
+        .basic-button:hover {
+            background-color: #008CBA;
+            color: white;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            opacity: 0.6;
+        }
+
+        .border-button-group button {
+            border: 1px solid green;
+            float: left;
+        }
+        .border-button-group button:not(:last-child) {
+            border-right: none;
+        }
+
+        .vertical-button-group button {
+            display: block;
+            width: 100%;
+        }
+        .vertical-button-group button:not(:last-child) {
+            border-bottom: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .animated-button {
+            animation: pules 5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <button class="basic-button">Button</button>
+    <hr/>
+
+    <div class="border-button-group">
+        <button>苹果</button>
+        <button>三星</button>
+        <button>索尼</button>
+    </div>
+    <hr/>
+
+    <div class="vertical-button-group">
+        <button>顶部</button>
+        <button>中间</button>
+        <button>底部</button>
+    </div>
+    <hr/>
+
+    <button class="animated-button">动画</button>
+</body>
+</html>

@@ -3,8 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS3 - Column_Layout 多列布局</title>
+    <!--
+    --------------------------------------------------------------------------
+    属性	                             描述
+    ==========================================================================
+    column-count                    指定列数
+    column-width                    设置每列的宽度
+    column-gap                      定义列之间的空间
+    column-rule                     设置列之间的线条的简写属性
+    column-rule-style               设置列规则的风格
+    column-rule-width               设置列规则的宽度
+    column-rule-color               设置列规则的颜色
+    column-span                     允许一个元素跨越列
+    break-after                     控制元素之后的列中断
+    --------------------------------------------------------------------------
+    -->
+
+    <style>
+        .three-col {
+            /* 列数 */
+            column-count: 3;
+            /* 列间距 */
+            column-gap: 40px;
+            border: 1px solid #ccc;
+        }
+
+        .flexible-col {
+            /* 列宽度，和 column-count 一起用会失效 */
+            column-width: 200px;
+            column-gap: 100px;
+            column-rule: 1px solid #ccc;
+        }
+
+        .style-col {
+            column-count: 3;
+            column-gap: 40px;
+            /* 列样式 */
+            column-rule: 10px solid #ccc;
+        }
+
+        .style-col2 {
+            column-count: 3;
+            column-gap: 40px;
+            /* 列样式 */
+            column-rule-color: #ff00ff;
+            column-rule-width: 5px;
+            column-rule-style: dashed;
+        }
+
+        .span-column {
+            column-count: 3;
+            column-gap: 40px;
+        }
+
+        .span-column p {
+            border: 1px solid red;
+        }
+
+        .span-column h2 {
+            /* 跨列 */
+            column-span: all;
+            text-align: center;
+        }
+
+        .p-col-span {
+            /* 跨2列 */
+            column-span: 2;
+            background-color: #888888;
+            padding: 10px;
+        }
+
+        .fragmented-columns {
+            column-count: 2;
+            column-gap: 40px;
+        }
+
+        .fragmented-columns h3 {
+            /* 确保每个章节标题从新列的顶部开始 */
+            break-after: column;
+        }
+    </style>
 </head>
 <body>
+    <div class="three-col">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores at atque consequatur consequuntur cum dignissimos dolorem dolores dolorum ea earum eius eligendi esse est et eveniet
+            expedita facilis fuga fugiat harum hic id illum incidunt ipsa ipsum iusto laborum laudantium libero magnam maiores maxime minima molestiae mollitia nam natus nesciunt nihil nisi non nostrum
+            nulla numquam obca</p>
+    </div>
+    <hr/>
 
+    <div class="flexible-col">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores at atque consequatur consequuntur cum dignissimos dolorem dolores dolorum ea earum eius eligendi esse est et eveniet
+            expedita facilis fuga fugiat harum hic id illum incidunt ipsa ipsum iusto laborum laudantium libero magnam maiores maxime minima molestiae mollitia nam natus nesciunt nihil nisi non nostrum
+            nulla numquam obca</p>
+    </div>
+    <hr/>
+
+    <div class="style-col">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores at atque consequatur consequuntur cum dignissimos dolorem dolores dolorum ea earum eius eligendi esse est et eveniet
+            expedita facilis fuga fugiat harum hic id illum incidunt ipsa ipsum iusto laborum laudantium libero magnam maiores maxime minima molestiae mollitia nam natus nesciunt nihil nisi non nostrum
+            nulla numquam obca</p>
+    </div>
+    <hr/>
+
+    <div class="style-col2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores at atque consequatur consequuntur cum dignissimos dolorem dolores dolorum ea earum eius eligendi esse est et eveniet
+            expedita facilis fuga fugiat harum hic id illum incidunt ipsa ipsum iusto laborum laudantium libero magnam maiores maxime minima molestiae mollitia nam natus nesciunt nihil nisi non nostrum
+            nulla numquam obca</p>
+    </div>
+    <hr/>
+
+    <div class="span-column">
+        <h2>这个标题跨越所有列</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="p-col-span">这个段落跨越两列。Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <hr/>
+
+    <div class="fragmented-columns">
+        <h3>第1章</h3>
+        <p>1.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h3>第2章</h3>
+        <p>2.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <hr/>
 </body>
 </html>
