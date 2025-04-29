@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - text-shadow 文本阴影</title>
+    <!--
+    基本语法：
+        text-shadow: 水平偏移 垂直偏移 模糊半径 颜色;
+    --------------------------------------------------------------------------
+    组件                      可能的值
+    ==========================================================================
+    水平偏移                任何长度值（px, em, rem等） - 可以是负数
+    垂直偏移                任何长度值（px, em, rem等） - 可以是负数
+    模糊半径                任何正长度值（px, em, rem等）
+    颜色                   任何有效的颜色值（名称、十六进制、rgb、rgba等）
+    --------------------------------------------------------------------------
+    -->
+
+    <style>
+        h1 {
+            text-shadow: 2px 2px #888888;
+        }
+
+        /* 添加模糊 */
+        .h1-vague {
+            text-shadow: 2px 2px 5px #888888;
+        }
+
+        .h1-color {
+            color: #888888;
+            text-shadow: 2px 2px 5px #cc33ff;
+        }
+
+        .h1-multi {
+            text-shadow: 2px 2px 5px #fff000, -2px -2px 5px #cc33ff;
+        }
+
+        .h1-multi-color {
+            color: #ffffff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 - text-shadow 文本阴影</h1>
+    <h1 class="h1-vague">CSS3 - text-shadow 文本阴影，增加模糊</h1>
+    <h1 class="h1-color">CSS3 - text-shadow 文本阴影，彩色阴影</h1>
+    <h1 class="h1-multi">CSS3 - text-shadow 文本阴影，多个文本阴影</h1>
+
+    <h1 class="h1-multi-color">CSS3 - text-shadow 文本阴影，霓虹灯效果</h1>
+</body>
+</html>

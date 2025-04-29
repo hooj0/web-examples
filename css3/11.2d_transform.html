@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - 2d_transform 2D变换</title>
+    <!--
+    2D变换
+    --------------------------------------------------------------------------
+    函数                          描述
+    ==========================================================================
+    translate()                  移动一个元素
+    rotate()                     旋转一个元素
+    scale()                      改变元素的大小
+    skew()                       倾斜一个元素
+    matrix()                     使用矩阵组合所有变换
+    --------------------------------------------------------------------------
+    -->
+
+    <style>
+        body {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* translate 移动元素 */
+        .box-translate {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transform: translate(50px, 30px);
+        }
+
+        /* rotate 旋转元素 */
+        .box-rotate {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            transform: rotate(45deg) translate(50px, 30px);
+        }
+
+        /* 反向旋转 */
+        .box-center {
+            transform: rotate(-45deg);
+        }
+
+        /* scale 改变元素的大小：改变元素的大小。值为 1 保持原始大小，小于 1 使其变小，大于 1 使其变大 */
+        .box-scale {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: scale(2, 0.5); /* 宽度加倍，高度减半 */
+        }
+
+        /* skew 倾斜和斜切 */
+        .box-skew {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            transform: skew(30deg, 30deg);
+        }
+
+        .box-matrix {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            transform: matrix(1, 0.5, -0.5, 1, 30, 10);
+        }
+    </style>
+</head>
+<body>
+    <div class="box-translate">移动元素</div>
+    <br/>
+    <hr/>
+    <div class="box-rotate">旋转元素</div>
+    <br/>
+    <hr/>
+    <div class="box-scale">改变元素大小</div>
+    <br/>
+    <hr/>
+    <div class="box-skew">倾斜和斜切</div>
+    <br/>
+    <hr/>
+    <div class="box-matrix">变换</div>
+</body>
+</html>

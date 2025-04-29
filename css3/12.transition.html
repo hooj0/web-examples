@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - transition 过渡</title>
+    <!--
+    transition 属性的基本语法如下：
+        transition: property duration timing-function delay;
+    ------------------------------------------------------------------------------------------
+    部分	                    可能的值
+    ==========================================================================================
+    property                all, none, 或特定的 CSS 属性（例如，width, height, color）
+    duration                秒（s）或毫秒（ms）的时间
+    timing-function         ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier(n,n,n,n)
+    delay                   秒（s）或毫秒（ms）的时间
+    ------------------------------------------------------------------------------------------
+    -->
+
+    <style>
+        body {
+            color: white;
+        }
+
+        /* 鼠标悬停时，背景色从蓝色变为红色 */
+        .ts-button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            transition: background-color 0.5s ease;
+        }
+
+        .ts-button:hover {
+            background-color: red;
+        }
+
+        /* 鼠标悬停时，宽度从100px变为200px，高度从100px变为200px，背景色从绿色变为黄色 */
+        .ts-grow {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .ts-grow:hover {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        /* 鼠标悬停时，显示文字 */
+        .reveal-text {
+            position: relative;
+            cursor: pointer;
+            color: #888888;
+        }
+
+        .secret {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease 0.2s;
+        }
+
+        .reveal-text:hover .secret {
+            opacity: 1;
+        }
+
+        /* 点击时，放大；长按时更大 */
+        .click-box {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+        }
+
+        .click-box:active {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <button class="ts-button">基本过渡</button>
+    <hr/>
+
+    <div class="ts-grow">
+        悬停放大
+    </div>
+    <hr/>
+
+    <div class="reveal-text">
+        <span>悬停显示文字</span>
+        <span class="secret">你太棒了！?</span>
+    </div>
+    <hr/>
+
+    <div class="click-box">点击</div>
+</body>
+</html>
