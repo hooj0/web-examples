@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <title>CSS3 - Image Style 图片样式</title>
     <!--
-
+    --------------------------------------------------------------------------------------
+    滤镜	                    描述	                        示例
+    ======================================================================================
+    grayscale()             将图片转换为灰度                filter: grayscale(100%);
+    sepia()                 将图片转换为棕褐色              filter: sepia(60%);
+    saturate()              提高图片的饱和度                filter: saturate(200%);
+    hue-rotate()            应用色相旋转                   filter: hue-rotate(90deg);
+    invert()                反转图片颜色                   filter: invert(75%);
+    opacity()               设置图片的透明度                filter: opacity(25%);
+    brightness()            调整图片的亮度                  filter: brightness(150%);
+    contrast()              调整图片的对比度                filter: contrast(200%);
+    blur()                  应用模糊效果                   filter: blur(5px);
+    --------------------------------------------------------------------------------------
     -->
     <style>
         .box-image {
@@ -93,6 +105,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
+        .filter-image {
+            filter: grayscale(100%) brightness(100%) contrast(120%);
+        }
     </style>
 </head>
 <body>
@@ -119,8 +135,8 @@
     <hr/>
 
     <div class="card-image">
-        <img src="https://www.w3school.com.cn/i/photo/life.png" alt="滤镜图片"/>
-        <div>滤镜图片</div>
+        <img src="https://www.w3school.com.cn/i/photo/life.png" alt="卡片"/>
+        <div>卡片图片</div>
     </div>
     <hr/>
 
@@ -128,9 +144,12 @@
     <hr/>
 
     <div class="center-text-image">
-        <img src="https://www.w3school.com.cn/i/photo/life.png" alt="响应式图片"/>
+        <img src="https://www.w3school.com.cn/i/photo/life.png" alt="居中文本"/>
         <div>文本居中显示</div>
     </div>
+    <hr/>
+
+    <img src="https://www.w3school.com.cn/i/photo/life.png" alt="滤镜图片" class="filter-image">
     <hr/>
 </body>
 </html>
