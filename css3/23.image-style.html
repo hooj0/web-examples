@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Image Style 图片样式</title>
+    <!--
+
+    -->
+    <style>
+        .box-image {
+            border-radius: 25px;
+            width: 300px;
+            height: 200px;
+        }
+
+        .circle-box {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            /* 填充图片 */
+            object-fit: cover;
+        }
+
+        .thumbnail {
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+        }
+
+        .thumbnail-link {
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform .3s ease;
+        }
+
+        .thumbnail-link:hover {
+            transform: scale(1.1);
+        }
+
+        .resize-image {
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .center-image-box {
+            text-align: center;
+        }
+
+        .center-image {
+            display: block;
+            margin: 50px auto;
+            width: 20%;
+        }
+
+        .card-image {
+            width: 250px;
+            margin-bottom: 25px;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .card-image img {
+            width: 100%;
+        }
+
+        .card-image div {
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .transparent-image {
+            opacity: .5;
+        }
+
+        .center-text-image {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .center-text-image div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <img src="https://www.w3school.com.cn/i/photo/life.png" alt="圆角图片" class="box-image">
+    <hr/>
+
+    <img src="https://www.w3school.com.cn/i/photo/life.png" alt="圆形图片" class="circle-box">
+    <hr/>
+
+    <img src="https://www.w3school.com.cn/i/photo/life.png" alt="缩略图" class="thumbnail">
+    <hr/>
+
+    <a href="#">
+        <img src="https://www.w3school.com.cn/i/photo/life.png" alt="缩略图" class="thumbnail-link">
+    </a>
+    <hr/>
+
+    <img src="https://www.w3school.com.cn/i/photo/life.png" alt="响应式图片" class="resize-image">
+    <hr/>
+
+    <div class="center-image-box">
+        <img src="https://www.w3school.com.cn/i/photo/life.png" alt="居中图片" class="center-image">
+    </div>
+    <hr/>
+
+    <div class="card-image">
+        <img src="https://www.w3school.com.cn/i/photo/life.png" alt="滤镜图片"/>
+        <div>滤镜图片</div>
+    </div>
+    <hr/>
+
+    <img src="https://www.w3school.com.cn/i/photo/life.png" alt="响应式图片" class="transparent-image">
+    <hr/>
+
+    <div class="center-text-image">
+        <img src="https://www.w3school.com.cn/i/photo/life.png" alt="响应式图片"/>
+        <div>文本居中显示</div>
+    </div>
+    <hr/>
+</body>
+</html>
