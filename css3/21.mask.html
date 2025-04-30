@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Mask 蒙板</title>
+    <!--
+    ---------------------------------------------------------------
+    值                           描述
+    ===============================================================
+    none                        不应用蒙版
+    <mask-reference>            指向一个蒙版图像
+    <masking-mode>              决定如何应用蒙版
+    <position>                  设置蒙版的位置
+    <bg-size>                   定义蒙版的大小
+    <repeat-style>              指定蒙版如何重复
+    <geometry-box>              定义蒙版框
+    no-clip                     防止裁剪蒙版
+    ---------------------------------------------------------------
+
+    ---------------------------------------------------------------
+    属性	描述
+    ===============================================================
+    mask-image                  指定蒙版图像
+    mask-mode                   设置蒙版模式
+    mask-repeat                 控制蒙版如何重复
+    mask-position               设置蒙版的位置
+    mask-clip                   决定蒙版的绘制区域
+    mask-origin                 设置蒙版的原点
+    mask-size                   指定蒙版的大小
+    mask-composite              定义蒙版如何组合
+    ---------------------------------------------------------------
+    -->
+
+    <style>
+        div {
+            background-color: yellow;
+            width: 200px;
+            height: 100px;
+        }
+
+        .none-mask {
+            mask: none;
+        }
+
+        .image-mask {
+            /*使用黑色图片*/
+            mask: url("https://www.w3school.com.cn/i/photo/life.png");
+            mask-image: url("https://www.w3school.com.cn/i/photo/life.png");
+        }
+
+        .gradient-mask {
+            mask-image: linear-gradient(to right, transparent, black);
+            mask: linear-gradient(to right, transparent, black);
+            /*alpha：使用蒙版图像的 alpha 通道。*/
+            /*luminance：使用蒙版图像的亮度。*/
+            mask-mode: alpha;
+            /* 蒙版在容器中居中 */
+            mask-position: center;
+            /* 蒙版填充整个容器 */
+            mask-size: cover;
+            /* 蒙版重复填充 */
+            mask-repeat: repeat-x;
+        }
+
+        .position-mask {
+            mask-position: center;
+            /* 或者 */
+            mask: url("https://www.w3school.com.cn/i/photo/life.png") center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="none-mask">无蒙版</div>
+    <hr/>
+
+    <div class="gradient-mask">图片蒙版</div>
+    <hr/>
+</body>
+</html>

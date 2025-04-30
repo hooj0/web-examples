@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Math Func 数学函数</title>
+    <!--
+    -----------------------------------------------------------------------------
+    函数	                描述	                        示例
+    =============================================================================
+    calc()              执行基本算术                   calc(100% - 20px)
+    min()               返回最小值                     min(5vw, 30px)
+    max()               返回最大值                     max(300px, 50%)
+    clamp()             在最小值和最大值之间固定值        clamp(200px, 50%, 500px)
+    abs()               返回绝对值                     abs(var(--x))
+    round()             四舍五入到最近的整数             round(100% / 3)
+    mod()               返回除法后的余数                mod(var(--i) * 10, 100)
+    sin()               返回角度的正弦值                sin(45deg)
+    cos()               返回角度的余弦值                cos(45deg)
+    -----------------------------------------------------------------------------
+    -->
+
+    <style>
+        div {
+            height: 100px;
+            background-color: red;
+            margin: 20px auto;
+        }
+
+        :root {
+            --x: 100px;
+        }
+
+        /* 计算函数 */
+        .calc-box {
+            width: calc(20% - 20px);
+            border-radius: calc(50% - 20px);
+        }
+
+        .min-box {
+            width: min(20%, 500px);
+            border-radius: min(50%, 20px);
+        }
+
+        .max-box {
+            width: max(20%, 500px);
+            border-radius: max(50%, 20px);
+        }
+
+        .clamp-box {
+            /*最小值、首选值和最大值*/
+            width: clamp(200px, 50%, 500px);
+            border-radius: clamp(50px, 10%, 200px);
+        }
+
+        .round-box {
+            width: round(50% / 3);
+        }
+    </style>
+</head>
+<body>
+    <div class="calc-box">计算函数</div>
+    <hr/>
+    <div class="min-box">比较函数 - min</div>
+    <div class="max-box">比较函数 - max</div>
+    <div class="clamp-box">比较函数 - clamp</div>
+    <hr/>
+
+    <div class="round-box">数学函数 - round</div>
+    <hr/>
+
+</body>
+</html>

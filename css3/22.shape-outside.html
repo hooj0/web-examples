@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 - Shape_Outside 形状</title>
+    <!--
+    ---------------------------------------------------------------------------
+    值                                   描述
+    ===========================================================================
+    margin-box                      使用元素的边距框作为形状
+    content-box                     使用元素的内容框作为形状
+    padding-box                     使用元素的填充框作为形状
+    border-box                      使用元素的边框框作为形状
+    circle()                        创建一个圆形形状
+    ellipse()                       创建一个椭圆形形状
+    url()                           使用一个图像来定义形状
+    polygon()                       创建一个多边形形状
+    inset()                         创建一个内嵌矩形
+    path()                          使用SVG路径定义形状
+    linear-gradient()               使用线性渐变来定义形状
+    ---------------------------------------------------------------------------
+    -->
+
+    <style>
+        .shape {
+            float: left;
+            width: 150px;
+            height: 100px;
+            background: orange;
+            /*shape-outside: ellipse(40% 50%);*/
+            /*shape-outside: circle(50%);*/
+            shape-outside: border-box;
+            border-radius: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="shape">嘿，这里有一个看不见的形状。别撞到它！嘿，这里有一个看不见的形状。别撞到它！</div>
+</body>
+</html>
